@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Todoey-->
+        <!--ToDoItems-->
         <scene sceneID="FUb-Iu-zkW">
             <objects>
                 <tableViewController id="8hz-hC-prm" customClass="TodoListViewController" customModule="Todoey" customModuleProvider="target" sceneMemberID="viewController">
@@ -40,7 +40,7 @@
                             <outlet property="delegate" destination="8hz-hC-prm" id="CrX-Sm-wYJ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Todoey" id="q1W-Ar-62P">
+                    <navigationItem key="navigationItem" title="ToDoItems" id="q1W-Ar-62P">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="D9s-CO-JeS">
                             <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                             <connections>
@@ -72,7 +72,7 @@
             </objects>
             <point key="canvasLocation" x="-628" y="107"/>
         </scene>
-        <!--Category View Controller-->
+        <!--Todoey-->
         <scene sceneID="ZXL-0h-s7w">
             <objects>
                 <tableViewController id="u8v-Tz-djl" customClass="CategoryViewController" customModule="Todoey" customModuleProvider="target" sceneMemberID="viewController">
@@ -95,7 +95,7 @@
                             <outlet property="delegate" destination="u8v-Tz-djl" id="tgA-iD-CE4"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="3aE-Um-8Jh">
+                    <navigationItem key="navigationItem" title="Todoey" id="3aE-Um-8Jh">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="6zb-pi-nAj">
                             <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                             <connections>
