@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		500F72E434136C0E2DB90B7A /* Pods_Todoey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62F604BD2EA3A4F1D8EE4870 /* Pods_Todoey.framework */; };
+		7427DB222079CBC20088C8A3 /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7427DB212079CBC20088C8A3 /* SwipeTableViewController.swift */; };
 		747E912B2072DACB002444C6 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747E912A2072DACB002444C6 /* CategoryViewController.swift */; };
 		74C5C5332072FF59002640A0 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C5C5322072FF59002640A0 /* Category.swift */; };
 		74C5C5352072FF62002640A0 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C5C5342072FF62002640A0 /* Item.swift */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		4A9DFBC30F501368A6CE382A /* Pods-Todoey.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todoey.release.xcconfig"; path = "Pods/Target Support Files/Pods-Todoey/Pods-Todoey.release.xcconfig"; sourceTree = "<group>"; };
 		62F604BD2EA3A4F1D8EE4870 /* Pods_Todoey.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Todoey.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7427DB212079CBC20088C8A3 /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
 		747E912A2072DACB002444C6 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		74C5C5322072FF59002640A0 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		74C5C5342072FF62002640A0 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			children = (
 				74DBC32F2069E7F0006350C9 /* TodoListViewController.swift */,
 				747E912A2072DACB002444C6 /* CategoryViewController.swift */,
+				7427DB212079CBC20088C8A3 /* SwipeTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -151,7 +154,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Chinmay Ghotkar";
 				TargetAttributes = {
 					74DBC3292069E7F0006350C9 = {
@@ -201,11 +204,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Todoey/Pods-Todoey-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeCellKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -256,6 +261,7 @@
 				74C5C5332072FF59002640A0 /* Category.swift in Sources */,
 				74DBC3302069E7F0006350C9 /* TodoListViewController.swift in Sources */,
 				74C5C5352072FF62002640A0 /* Item.swift in Sources */,
+				7427DB222079CBC20088C8A3 /* SwipeTableViewController.swift in Sources */,
 				74DBC32E2069E7F0006350C9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,6 +302,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -303,6 +310,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -353,6 +361,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -360,6 +369,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

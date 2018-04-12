@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class TodoListViewController: UITableViewController {
+class TodoListViewController: SwipeTableViewController {
 
     var toDoItems : Results<Item>?
     let realm = try! Realm()
@@ -22,7 +22,6 @@ class TodoListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getItems()
-        
     }
     
     //MARK: - Tableview Datasource Methods
@@ -31,7 +30,7 @@ class TodoListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoItemCell", for: indexPath)
+        let cell = super.tableView(tableView, cellForRowAt: indexPath)
         
         if let item = toDoItems?[indexPath.row] {
             cell.textLabel?.text = item.title
@@ -107,6 +106,21 @@ class TodoListViewController: UITableViewController {
 
     }
     
+    
+    // MARK: - Delete data from swipe
+    
+    override func updateModel(at indexPath: IndexPath) {
+        if let selecteditem = self.toDoItems?[indexPath.row] {
+            do {
+                try self.realm.write {
+                    self.realm.delete(selecteditem)
+                }
+            } catch {
+                print("Error saving deleting. \(error)")
+            }
+        }
+    }
+    
 }
 
 // MARK: - Search Bar Delegate Methods
@@ -115,6 +129,8 @@ extension TodoListViewController: UISearchBarDelegate {
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         toDoItems = toDoItems?.filter("title CONTAINS[cd] %@", searchBar.text!).sorted(byKeyPath: "dateCreated", ascending: false)
+        
+        tableView.reloadData()
     }
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
