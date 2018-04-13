@@ -18,7 +18,6 @@ class CategoryViewController: SwipeTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getCategories()
-        tableView.separatorStyle = .none
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,8 +36,10 @@ class CategoryViewController: SwipeTableViewController {
         cell.textLabel?.text = categories?[indexPath.row].name ?? "No Categories added yet!"
         if let cellColor = categories?[indexPath.row].color {
             cell.backgroundColor = UIColor(hexString: cellColor)
+            guard let categoryColor = UIColor(hexString: cellColor) else {fatalError()}
+            cell.textLabel?.textColor = ContrastColorOf(categoryColor, returnFlat: true)
         } else {
-            cell.backgroundColor = UIColor(hexString: "000000"
+            cell.backgroundColor = UIColor(hexString: "000000")
         }
         
         
