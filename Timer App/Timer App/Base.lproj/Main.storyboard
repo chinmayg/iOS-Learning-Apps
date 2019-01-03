@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Timer_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o2V-5S-X0u">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Timer" id="wDp-rg-LMO">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="pause" id="4Ba-Mb-Ftb" userLabel="Pause">
+                                            <connections>
+                                                <action selector="pauseButtonPressed:" destination="BYZ-38-t0r" id="IOC-Cg-RMw"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="Iyg-i6-uvs" userLabel="Play">
+                                            <connections>
+                                                <action selector="playButtonPressed:" destination="BYZ-38-t0r" id="ZVY-0j-MBG"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rcc-6z-5o2">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="-10" width="36" id="YfY-pe-vt4">
+                                        <connections>
+                                            <action selector="minusTenButtonPressed:" destination="BYZ-38-t0r" id="r9h-E1-vMK"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="a4T-jz-91Z"/>
+                                    <barButtonItem title="Reset" id="O5w-yQ-wNi" userLabel="Reset">
+                                        <connections>
+                                            <action selector="resetButtonPressed:" destination="BYZ-38-t0r" id="Xyp-CM-QZX"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ZAG-xV-69a"/>
+                                    <barButtonItem title="+10" id="LWw-us-5Ox" userLabel="+10">
+                                        <connections>
+                                            <action selector="plusTenButtonPressed:" destination="BYZ-38-t0r" id="sNH-AE-YvN"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="db5-4m-lGl">
+                                <rect key="frame" x="0.0" y="273.5" width="375" height="120"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="db5-4m-lGl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XNs-cI-Iv8"/>
+                            <constraint firstItem="db5-4m-lGl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="XVv-Wg-9Ky"/>
+                            <constraint firstItem="db5-4m-lGl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vht-LT-tkp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="timerTextField" destination="db5-4m-lGl" id="sAv-7S-WXN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
